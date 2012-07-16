@@ -1,0 +1,1849 @@
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:12:42) [GET]
+
+NameError (undefined local variable or method `time_cal' for #<EventsController:0x3b2223c>):
+  app/controllers/events_controller.rb:4:in `index'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:13:22) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mMysql::Error: Table 'test.events' doesn't exist: SELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'test.events' doesn't exist: SELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') ):
+  app/controllers/events_controller.rb:15:in `find_events'
+  app/controllers/events_controller.rb:5:in `index'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (73.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (128.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEvents (20111121102900)
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: BLOB/TEXT column 'description' can't have a default value: CREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(25), `description` text DEFAULT '' NOT NULL, `begin_time` datetime, `end_time` datetime, `location` varchar(25), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEvents (20111121102900)
+  [4;35;1mSQL (93.0ms)[0m   [0mCREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(25), `description` text NOT NULL, `begin_time` datetime, `end_time` datetime, `location` varchar(25), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20111121102900')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `events`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `events`[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:16:00) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:16:07) [GET]
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:19:00) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:20:08) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#1 (for 127.0.0.1 at 2012-07-13 14:21:36) [GET]
+
+ActionController::UnknownAction (No action responded to 1. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:21:44) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:24:28) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:24:30) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:24:31) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:25:20) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:30:12) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+
+ActionView::TemplateError (undefined method `generate_loader_big' for #<ActionView::Base:0x7e764d4>) on line #37 of app/views/events/index.html.erb:
+34: 			showMoreEvent(dayEvents,id);
+35:   		},
+36: 		onMonthChanging: function(dateIn) {
+37: 			<%=remote_function(:url => {:controller => :events, :action => :get_events_for_this_month}, :with=>"'time='+dateIn.toLocaleDateString() + '&event_type=' + $('#event_type_select_box').val()",:loading => generate_loader_big('leftcolumn1_form_manage','true'))%>;
+38: 		},
+39: 		onEventBlockClick: function(event) {
+40: 			return false;
+
+    app/views/events/index.html.erb:37
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:33:16) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::PERMISSION) on line #47 of app/views/events/index.html.erb:
+44: 		},
+45: 		onDayCellDblClick: function(event){
+46: 			//alert(event.data.Date.toLocaleDateString());
+47: 			<% if has_permission(PERMISSION["Create Event"],"",current_community) %>
+48: 		$('#gallery_event_new').html('<div align="center"><img alt="Ajax-loader" class="ajax" src="/PVC/images/ajax-loader.gif?1282578557" /></div><div align="center">Loading...Please Wait!</div><br/>');
+49:     $('#gallery_event_new').dialog({
+50:         position: 'top'
+
+    app/views/events/index.html.erb:47
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:33:59) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+
+ActionView::TemplateError (undefined local variable or method `current_community' for #<ActionView::Base:0x7d6f84c>) on line #56 of app/views/events/index.html.erb:
+53:     if ($('#gallery_event_new').dialog("isOpen") == true) {
+54:         $('#gallery_event_new').dialog('close');
+55:     }
+56:     var post_location = "/PVC/events/new_lightbox?current_community_id=<%=current_community.slug%>&date=" + event.data.Date.toLocaleDateString();
+57:     $.ajax({
+58:         url: post_location,
+59:         success: function(data){
+
+    app/views/events/index.html.erb:56
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:34:46) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:34:48) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:35:26) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+Completed in 57ms (View: 52, DB: 0) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:37:57) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Completed in 287ms (View: 277, DB: 6) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:41:02) [GET]
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+  [4;36;1mEvent Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 15ms (View: 5, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:43:07) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 260ms (View: 162, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:43:14) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering events/index
+  [4;35;1mEvent Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Completed in 19ms (View: 5, DB: 7) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:44:12) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 26ms (View: 17, DB: 3) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 14:44:13) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-1.4.4.min.jsjquery.lightbox-0.5.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:45:12) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 28ms (View: 17, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 14:45:33) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 14:45:33) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_75_ffffff_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 14:45:33) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 14:45:33) [GET]
+  Parameters: {"date"=>"Thursday, July 12, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 14:45:33) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 14:46:31) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 19ms (View: 9, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:01:27) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:01:27) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_75_ffffff_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:01:27) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 15:01:27) [GET]
+  Parameters: {"date"=>"Monday, July 09, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:01:27) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:01:33) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:01:33) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-icons_454545_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:06:00) [GET]
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 20ms (View: 9, DB: 6) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:09:59) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Completed in 28ms (View: 17, DB: 6) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:11:42) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 25ms (View: 14, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:13:23) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Completed in 26ms (View: 15, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:15:57) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 24ms (View: 14, DB: 4) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:16:14) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Completed in 25ms (View: 15, DB: 4) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:22:31) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 265ms (View: 169, DB: 6) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:22:34) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:22:52) [POST]
+  Parameters: {"time"=>"Sunday, July 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:21) [POST]
+  Parameters: {"time"=>"Friday, June 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-06-01' AND '2012-06-30') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:22) [POST]
+  Parameters: {"time"=>"Tuesday, May 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-05-01' AND '2012-05-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:22) [POST]
+  Parameters: {"time"=>"Sunday, April 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (2.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-04-01' AND '2012-04-30') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:31) [POST]
+  Parameters: {"time"=>"Thursday, March 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-03-01' AND '2012-03-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:32) [POST]
+  Parameters: {"time"=>"Sunday, April 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-04-01' AND '2012-04-30') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:33) [POST]
+  Parameters: {"time"=>"Tuesday, May 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-05-01' AND '2012-05-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:34) [POST]
+  Parameters: {"time"=>"Friday, June 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-06-01' AND '2012-06-30') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:43) [POST]
+  Parameters: {"time"=>"Sunday, July 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:44) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:44) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:24:46) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+
+ActionView::MissingTemplate (Missing template events/get_events_for_the_given_month.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:25:42) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Completed in 18ms (View: 7, DB: 6) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:25:44) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendering index
+
+ActionView::MissingTemplate (Missing template index.erb in view path app/views):
+  app/controllers/events_controller.rb:12:in `get_events_for_the_given_month'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:25:45) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+Rendering index
+
+ActionView::MissingTemplate (Missing template index.erb in view path app/views):
+  app/controllers/events_controller.rb:12:in `get_events_for_the_given_month'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:25:46) [POST]
+  Parameters: {"time"=>"Monday, October 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-10-01' AND '2012-10-31') [0m
+Rendering index
+
+ActionView::MissingTemplate (Missing template index.erb in view path app/views):
+  app/controllers/events_controller.rb:12:in `get_events_for_the_given_month'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:34:29) [POST]
+  Parameters: {"time"=>"Thursday, November 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-11-01' AND '2012-11-30') [0m
+Rendering index
+
+ActionView::MissingTemplate (Missing template index.erb in view path app/views):
+  app/controllers/events_controller.rb:12:in `get_events_for_the_given_month'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:35:50) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Completed in 20ms (View: 6, DB: 9) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:35:52) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendering index
+
+ActionView::MissingTemplate (Missing template index.erb in view path app/views):
+  app/controllers/events_controller.rb:12:in `get_events_for_the_given_month'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:38:57) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+Rendering index
+
+ActionView::MissingTemplate (Missing template index.erb in view path app/views):
+  app/controllers/events_controller.rb:12:in `get_events_for_the_given_month'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:38:58) [POST]
+  Parameters: {"time"=>"Monday, October 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-10-01' AND '2012-10-31') [0m
+Rendering index
+
+ActionView::MissingTemplate (Missing template index.erb in view path app/views):
+  app/controllers/events_controller.rb:12:in `get_events_for_the_given_month'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:44:20) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (16.0ms)
+Completed in 44ms (View: 30, DB: 6) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:23) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:24) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:26) [POST]
+  Parameters: {"time"=>"Monday, October 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-10-01' AND '2012-10-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:26) [POST]
+  Parameters: {"time"=>"Thursday, November 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-11-01' AND '2012-11-30') [0m
+Rendered events/_calendar (3.0ms)
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:27) [POST]
+  Parameters: {"time"=>"Saturday, December 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-12-01' AND '2012-12-31') [0m
+Rendered events/_calendar (9.0ms)
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:28) [POST]
+  Parameters: {"time"=>"Thursday, November 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-11-01' AND '2012-11-30') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:28) [POST]
+  Parameters: {"time"=>"Monday, October 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-10-01' AND '2012-10-31') [0m
+Rendered events/_calendar (3.0ms)
+Completed in 10ms (View: 4, DB: 2) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:28) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:44:29) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:44:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:45:11) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (12.0ms)
+Completed in 24ms (View: 8, DB: 9) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:45:15) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:45:16) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 11ms (View: 3, DB: 2) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:45:17) [POST]
+  Parameters: {"time"=>"Monday, October 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-10-01' AND '2012-10-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:45:18) [POST]
+  Parameters: {"time"=>"Thursday, November 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-11-01' AND '2012-11-30') [0m
+Rendered events/_calendar (3.0ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:45:19) [POST]
+  Parameters: {"time"=>"Monday, October 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-10-01' AND '2012-10-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:45:19) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:45:19) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (5.0ms)
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:45:21) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:45:21) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_75_ffffff_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:45:21) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:45:21) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 15:45:21) [GET]
+  Parameters: {"date"=>"Tuesday, July 31, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:46:58) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_75_ffffff_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:48:11) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:48:11) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-icons_454545_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:48:56) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (9.0ms)
+Completed in 20ms (View: 9, DB: 4) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 15:48:58) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"YwfWp/CDCRCtsezTV0xLVUXY0xquLaXhZJhf1pBIVso=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (3.0ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:49:01) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:49:01) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_75_ffffff_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:49:01) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 15:49:01) [GET]
+  Parameters: {"date"=>"Tuesday, August 07, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:49:01) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:49:06) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:49:06) [GET]
+
+ActionController::RoutingError (No route matches "/PVC/images/ui-icons_454545_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 15:53:27) [GET]
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (9.0ms)
+Completed in 19ms (View: 7, DB: 7) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:53:36) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:53:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 15:53:36) [GET]
+  Parameters: {"date"=>"Monday, July 02, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:53:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:53:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 15:53:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 16:07:53) [GET]
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (242.0ms)
+Completed in 414ms (View: 268, DB: 6) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 16:07:57) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 16:07:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 16:07:57) [GET]
+  Parameters: {"date"=>"Monday, July 02, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 16:07:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (14.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 18:43:11) [GET]
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (5557.0ms)
+Completed in 5828ms (View: 5617, DB: 18) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:43:30) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:43:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:43:30) [GET]
+  Parameters: {"date"=>"Monday, July 09, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:43:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:43:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:44:50) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:44:50) [GET]
+  Parameters: {"date"=>"Wednesday, July 04, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:44:59) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:44:59) [GET]
+  Parameters: {"date"=>"Tuesday, July 17, 2012"}
+
+ActionController::UnknownAction (No action responded to new. Actions: find_events, get_events_for_the_given_month, and index):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:47:49) [GET]
+  Parameters: {"date"=>"Thursday, July 05, 2012"}
+Rendered events/_new (29.0ms)
+Completed in 34ms (View: 33, DB: 0) | 200 OK [http://localhost/events/new?date=Thursday,%20July%2005,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:47:49) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:47:57) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:47:57) [GET]
+  Parameters: {"date"=>"Wednesday, July 11, 2012"}
+Rendered events/_new (1.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Wednesday,%20July%2011,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:49:10) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:49:10) [GET]
+  Parameters: {"date"=>"Wednesday, July 11, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Wednesday,%20July%2011,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:49:14) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:49:14) [GET]
+  Parameters: {"date"=>"Wednesday, July 18, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Wednesday,%20July%2018,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:51:01) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:51:03) [POST]
+  Parameters: {"time"=>"Saturday, September 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-09-01' AND '2012-09-30') [0m
+Rendered events/_calendar (3.0ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:51:04) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (3.0ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:51:05) [POST]
+  Parameters: {"time"=>"Sunday, July 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (10.0ms)
+Completed in 21ms (View: 6, DB: 7) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:51:08) [GET]
+  Parameters: {"1282578557"=>nil}
+
+ActionController::RoutingError (No route matches "/PVC/images/ajax-loader.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:51:08) [GET]
+  Parameters: {"date"=>"Monday, July 02, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/events/new?date=Monday,%20July%2002,%202012]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 18:51:43) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (16.0ms)
+Completed in 28ms (View: 20, DB: 4) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:51:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:51:47) [GET]
+  Parameters: {"date"=>"Tuesday, July 03, 2012"}
+Rendered events/_new (1.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Tuesday,%20July%2003,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:51:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:51:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:51:53) [GET]
+  Parameters: {"date"=>"Tuesday, July 17, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/events/new?date=Tuesday,%20July%2017,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:52:31) [GET]
+  Parameters: {"date"=>"Wednesday, July 11, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Wednesday,%20July%2011,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:52:35) [GET]
+  Parameters: {"date"=>"Monday, July 09, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Monday,%20July%2009,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 18:52:39) [GET]
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (8.0ms)
+Completed in 18ms (View: 8, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:52:52) [GET]
+  Parameters: {"date"=>"Friday, July 06, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Friday,%20July%2006,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:52:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:52:52) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:53:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:53:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:53:16) [GET]
+  Parameters: {"date"=>"Thursday, July 19, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Thursday,%20July%2019,%202012]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:53:23) [POST]
+  Parameters: {"time"=>"Friday, June 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-06-01' AND '2012-06-30') [0m
+Rendered events/_calendar (1.0ms)
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:53:24) [POST]
+  Parameters: {"time"=>"Tuesday, May 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-05-01' AND '2012-05-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:53:24) [POST]
+  Parameters: {"time"=>"Sunday, April 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (1.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-04-01' AND '2012-04-30') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 15ms (View: 3, DB: 2) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:53:28) [GET]
+  Parameters: {"date"=>"Tuesday, April 03, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Tuesday,%20April%2003,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:54:00) [POST]
+  Parameters: {"time"=>"Tuesday, May 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-05-01' AND '2012-05-31') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:54:02) [POST]
+  Parameters: {"time"=>"Friday, June 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-06-01' AND '2012-06-30') [0m
+Rendered events/_calendar (2.0ms)
+Completed in 11ms (View: 4, DB: 2) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:54:03) [POST]
+  Parameters: {"time"=>"Sunday, July 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+  [4;36;1mEvent Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (7.0ms)
+Completed in 14ms (View: 5, DB: 3) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:54:04) [POST]
+  Parameters: {"time"=>"Wednesday, August 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-08-01' AND '2012-08-31') [0m
+Rendered events/_calendar (1.0ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#get_events_for_the_given_month (for 127.0.0.1 at 2012-07-13 18:54:05) [POST]
+  Parameters: {"time"=>"Sunday, July 01, 2012", "authenticity_token"=>"h0MHbEJRck2xbipASnP8WQaInIgd4b/YiepnCzlUUx4=", "event_type"=>"undefined"}
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (10.0ms)
+Completed in 24ms (View: 7, DB: 5) | 200 OK [http://localhost/events/get_events_for_the_given_month]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 18:57:14) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (8.0ms)
+Completed in 20ms (View: 8, DB: 4) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:58:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 18:58:15) [GET]
+  Parameters: {"date"=>"Friday, July 20, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 4ms (View: 2, DB: 1) | 200 OK [http://localhost/events/new?date=Friday,%20July%2020,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:58:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 18:58:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-13 19:02:03) [GET]
+  [4;36;1mEvent Load (0.0ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;35;1mEvent Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (17.0ms)
+Completed in 29ms (View: 18, DB: 5) | 200 OK [http://localhost/events/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 19:02:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 19:02:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-13 19:02:12) [GET]
+  Parameters: {"date"=>"Friday, July 27, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 2ms (View: 1, DB: 1) | 200 OK [http://localhost/events/new?date=Friday,%20July%2027,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-13 19:02:14) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-16 11:01:09) [GET]
+  [4;35;1mEvent Load (79.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (2104.0ms)
+Completed in 2462ms (View: 2222, DB: 85) | 200 OK [http://localhost/events/index]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-16 11:01:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-16 11:01:16) [GET]
+  Parameters: {"date"=>"Saturday, July 14, 2012"}
+Rendered events/_new (3.0ms)
+Completed in 8ms (View: 7, DB: 1) | 200 OK [http://localhost/events/new?date=Saturday,%20July%2014,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-16 11:01:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-16 11:01:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-16 11:02:06) [GET]
+  Parameters: {"date"=>"Wednesday, July 18, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 1, DB: 1) | 200 OK [http://localhost/events/new?date=Wednesday,%20July%2018,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-16 11:02:14) [GET]
+  Parameters: {"date"=>"Saturday, July 14, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/events/new?date=Saturday,%20July%2014,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-16 11:03:01) [GET]
+  Parameters: {"date"=>"Saturday, July 14, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/events/new?date=Saturday,%20July%2014,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-16 11:03:06) [GET]
+  Parameters: {"date"=>"Thursday, July 12, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/events/new?date=Thursday,%20July%2012,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-16 11:08:24) [GET]
+  [4;35;1mEvent Load (0.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (1998.0ms)
+Completed in 2098ms (View: 2012, DB: 4) | 200 OK [http://localhost/events]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-16 11:08:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-icons_222222_256x240.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-16 11:08:35) [GET]
+  Parameters: {"date"=>"Saturday, July 14, 2012"}
+Rendered events/_new (1.0ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/events/new?date=Saturday,%20July%2014,%202012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-16 11:08:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_flat_0_aaaaaa_40x100.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-07-16 11:08:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/ui-bg_glass_75_dadada_1x400.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#new (for 127.0.0.1 at 2012-07-16 11:08:41) [GET]
+  Parameters: {"date"=>"Saturday, July 14, 2012"}
+Rendered events/_new (0.0ms)
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/events/new?date=Saturday,%20July%2014,%202012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EventsController#index (for 127.0.0.1 at 2012-07-16 11:30:38) [GET]
+  [4;35;1mEvent Load (1.0ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`begin_time` BETWEEN '2012-07-01' AND '2012-07-31') [0m
+Rendering template within layouts/events
+Rendering events/index
+  [4;36;1mEvent Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+Rendered events/_calendar (2197.0ms)
+Completed in 2554ms (View: 2402, DB: 10) | 200 OK [http://localhost/events/index]

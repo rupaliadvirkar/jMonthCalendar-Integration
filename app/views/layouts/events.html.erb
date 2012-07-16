@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>jmonthcalendar</title>
+        <%= stylesheet_link_tag 'jquery.lightbox-0.5.css'%>
+        <%= javascript_include_tag 'jquery-1.4.4.min.js','jquery.lightbox-0.5.js' %>
+        <%= stylesheet_link_tag  'jquery.qtip.min.css', 'jmonthcalendareventdefault.css' %>
+        <%= javascript_include_tag 'jquery.qtip.min.js' ,'jmonthcalendar.js' %>
+        <style>
+            div#Dvtip {
+                display: none;
+                position: absolute;
+                padding: 5px;
+                left: 5px;
+                color: #A27D35;
+                min-width: 125px;
+                background-color: #FBF7AA;
+                border: 1px solid #F9E98E;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                z-index: 999
+            }
+            
+            div#Dvtip a {
+                display: block;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+        </style>
+    </head>
+    <body>
+	<div id="gallery_event_new" style="display:none;"></div>
+        <div id="updatediv">
+             <%= yield %>
+        </div>
+    </body>
+</html>

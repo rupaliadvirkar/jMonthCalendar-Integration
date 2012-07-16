@@ -1,0 +1,140 @@
+<div id="jMonthCalendarEventDefault">
+</div>
+<%if @events %>
+<script type="text/javascript">
+            $(document).ready(function()
+            {
+            	// Setup your calendar events	
+            	var eve = [];
+            	
+            	<%for e in @events%>
+            		eve.push({"EventID": <%=e.id%>, "EventSTime": '<%=e.begin_time.strftime("%I:%M%p")%>', "StartDateTime":  "new Date(<%=e.begin_time.year.to_i%>, <%=e.begin_time.mon.to_i%> - 1, <%=e.begin_time.day.to_i%>)", "EventETime": '<%=e.end_time.strftime("%I:%M%p")%>', "EndDateTime": 'new Date(<%=e.end_time.year.to_i%>, <%=e.end_time.mon.to_i%> -1 , <%=e.end_time.day.to_i%>)', "Title": "<%=e.name%>", "URL": "#", "Description": "<%=e.name%>"});
+                <%end%>
+                
+            	start_date = new Date();
+            	
+            	<%if params[:time]%>
+            		start_date = new Date(<%=params[:time].to_time.year.to_i%>, <%=params[:time].to_time.mon.to_i%> - 1, <%=params[:time].to_time.day.to_i%>);
+            	<%end%>
+            	
+                var events =   eve;
+            
+            	// Initialize the calendar
+            	$.jMonthCalendar.Initialize(
+            	{
+            		containerId: "#jMonthCalendarEventDefault",
+            		calendarStartDate: start_date,
+            		dragableEvents: false,
+            		onShowMoreClick:function(dayEvents,id) {
+            			showMoreEvent(dayEvents,id);
+              		},
+            		onMonthChanging: function(dateIn) {
+            			<%=remote_function(:url => {:controller => :events, :action => :get_events_for_the_given_month}, :update => 'updatediv', :with=>"'time='+dateIn.toLocaleDateString() + '&event_type=' + $('#event_type_select_box').val()",:loading => generate_loader_big('updatediv','true'))%>;
+            		},
+            		onEventBlockClick: function(event) {
+            			return false;
+            		},
+            		onDayCellClick: function(event) {
+            			return false;
+            		},
+            		onDayCellDblClick: function(event){
+            		$('#gallery_event_new').html('<div align="center"><img alt="Ajax-loader" class="ajax" src="/images/ajax-loader.gif?1282578557" /></div><div align="center">Loading...Please Wait!</div><br/>');
+                	$('#gallery_event_new').dialog({
+                    	position: 'top'
+                	});
+                	$('#gallery_event_new').dialog('close');
+                	if ($('#gallery_event_new').dialog("isOpen") == true) {
+                    	$('#gallery_event_new').dialog('close');
+                	}
+                	var post_location = "/events/new?date=" + event.data.Date.toLocaleDateString();
+                	$.ajax({
+                    	url: post_location,
+                    	success: function(data){
+                        jQuery('#gallery_event_new').html(data);
+                    	}
+                	});
+                	$('#gallery_event_new').dialog({
+                   	 	closeOnEscape: true
+                	}, {
+                    	position: 'top'
+                	}, {
+                    	width: '750px'
+                	}, {
+                    	height: 'auto'
+                	}, {
+                    	title: 'Schedule an Event'
+                	}, {
+                    	modal: true
+                	});
+            		},
+            		onEventBlockOver: function(event)
+            		{
+            			content_event = event.data.Event.Description + "<br/>" + event.data.Event.EventSTime + " - " + event.data.Event.EventETime; // Use the event description from the event.data object
+            			$(this).qtip({
+            				overwrite: false, // Force one tooltip per event
+            				content: content_event,
+            				position: {
+            					my: 'top left', // Position the tooltip...
+            					at: 'bottom center', // ...at the bottom of the event
+            					viewport: $(window) // Try to keep the tooltip onscreen at all times
+            				},
+            				show: {
+            					event: 'mouseover', // Show the tooltip when event is hovered and tooltip is 'ready'
+            					ready: true,
+            					solo: true 
+            				},
+            				hide: 'unfocus', // Hide when the tooltip loses focus
+            				style: {
+            					classes: 'ui-tooltip-cream ui-tooltip-shadow ui-tooltip-rounded'
+            				}
+            			});
+            		}
+            	}
+            	, events);
+            });
+            function showMoreEvent(dayEvents,id){
+            	        var eventlist;
+			eventlist=""
+            			$.each(dayEvents, function(){
+        					eventlist+="<p><span style=\"cursor:pointer;\" id=\"more_event_"+ this.EventID  + "\"onmouseover =\" more_event_tooltip(" + this.EventID + ",'" + this.Description + "','" + this.EventSTime + "','"+ this.EventETime + "')\">" + this.Description + "</span></p>";
+            			});
+            			var c='<div id="Dvtip" class="Dvtip"></div>';
+            			var d='500';
+            			var tt;
+            			var f;
+            			$("body").append(c);
+            			tt=$("#Dvtip");
+            			tt.html(eventlist);
+            			var k=$("#ME_"+id).offset();
+            			var i=k;i.top=k.top+$("#ME"+id).height()-50;i.left=k.left;
+            				tt.css(i);
+            			tt.css("position","absolute");
+            			tt.show();    			
+            			document.onclick = (function(e){
+            					$("#Dvtip").remove();
+            			});
+            			
+            
+            };
+            function more_event_tooltip(id,description,stime,etime){
+    			        	content_event =  description + "</a><br/>" + stime + " - " + etime ;
+            				$("#more_event_" + id).qtip({
+            				overwrite: false, // Force one tooltip per event
+            				content: content_event,
+            				position: {
+            					viewport: $(window) // Try to keep the tooltip onscreen at all times
+            				},
+            				show: {
+            					event: 'mouseover', // Show the tooltip when event is hovered and tooltip is 'ready'
+            					ready: true,
+            					solo: true 
+            				},
+            				hide: 'unfocus', // Hide when the tooltip loses focus
+            				style: {
+            					classes: 'ui-tooltip-plain ui-tooltip-shadow ui-tooltip-rounded'
+            				}
+            			});
+            
+            };
+</script>
+<%end %>
