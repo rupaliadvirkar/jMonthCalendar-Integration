@@ -1,6 +1,6 @@
 jMonthCalendar-Integration
 ==========================
-This project shows full fladged intergration of jmonthcalendar with RoR.
+This project shows full fladged intergration of jmonthcalendar with RoR using jquery.
 
 This uses jMonthCalendar which can be dowunloaded from http://code.google.com/p/jmonthcalendar/
 
